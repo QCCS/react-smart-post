@@ -1,6 +1,6 @@
 {
   "name": "react-smart-post",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "用于react组件之间的信息交互",
   "main": "index.js",
   "scripts": {

@@ -22,7 +22,7 @@ npm i react-smart-post
 
 另一种方式:
 ``` javascript
-import smartPost from 'smartPost'
+import smartPost from 'react-smart-post'
 class Parent extends Component{
   render() {
     return (
