@@ -13,8 +13,10 @@ npm i react-smart-post
 
 #### API
 ```
+  //可能会收到消息的组件
   smartPost.push(component);
-  smartPost.post(messageState,componentName);
+  //发送消息到目标组件
+  smartPost.post(messageState,targetComponentName);
 ```
 #### 使用方式
 
