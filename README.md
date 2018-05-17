@@ -1,19 +1,26 @@
-#### how to install
+### 功能定位
+跨组件通信
+
+比react-event功能强大，代码更少
+
+比context更好理解使用简单,不到30行代码
+
+#### 如何安装
 
 ```
 npm i react-smart-post
 ```
 
-#### function api
+#### API
 ```
   smartPost.push(component);
   smartPost.post(messageState,componentName);
 ```
-#### how to use
+#### 使用方式
 
-the first way : copy code to your project ;
+第一种方式 : 直接把此函数拷贝到项目公共函数中，需要使用的时候，就使用一下 ;
 
-other way:
+另一种方式:
 ``` javascript
 import smartPost from 'smartPost'
 class Parent extends Component{
