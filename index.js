@@ -12,9 +12,24 @@ function SmartPost() {
     this.get = function (message) {
         this.setState(message);
     }
-    this.post = function (message, target) {
+    this.post = function (message, target, force) {
         this.message = message;
-        this.notifyItemByTarget(target);
+        if(force){
+            this.notifyItemByEvent(target);
+        }else {
+            this.notifyItemByTarget(target);
+        }
+    }
+    this.notifyItemByEvent = function (target) {
+        var len = this.container.length;
+        var item = null;
+        for (let i = 0; i < len; i++) {
+            item = this.container[i];
+            if (target && item.constructor.name === target && item.smartPostOn) {
+                item.smartPostOn(this.message);
+                return;
+            }
+        }
     }
     this.notifyItemByTarget = function (target) {
         var len = this.container.length;

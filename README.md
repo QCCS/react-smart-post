@@ -1,5 +1,5 @@
 ### 功能定位
-30行代码解耦跨组件通信
+解耦跨组件通信
 
 比react-event功能强大，代码更少
 
@@ -15,8 +15,14 @@ npm i react-smart-post
 ```
   //可能会收到消息的组件
   smartPost.push(component);
-  //发送消息到目标组件
+  //发送消息到目标组件,目标组件直接改变state
   smartPost.post(messageState,targetComponentName);
+  //发送消息到目标组件,目标组件仅仅在smartPostOn中收到信息
+  smartPost.post(messageState,targetComponentName,true);
+  //目标组件收信息
+  smartPostOn=(message)=>{
+    console.log(message)
+  }
 ```
 #### 使用方式
 
